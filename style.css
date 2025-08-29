@@ -774,14 +774,14 @@ select.form-control {
   --color-orange-400-rgb: 230, 129, 97;
 
   /* Background color tokens (Light Mode) */
-  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
-  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
-  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
-  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
-  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
-  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
-  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
-  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
 
   /* Semantic Color Tokens (Light Mode) */
   --color-background: var(--color-cream-50);
@@ -874,6 +874,12 @@ select.form-control {
   --duration-fast: 150ms;
   --duration-normal: 250ms;
   --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
 }
 
 /* Dark mode colors */
@@ -884,17 +890,15 @@ select.form-control {
     --color-gray-300-rgb: 167, 169, 169;
     --color-gray-200-rgb: 245, 245, 245;
 
-    /* Background color tokens (Dark Mode) */
-    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
-    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
-    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
-    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
-    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
-    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
-    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
-    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
     
-    /* Semantic Color Tokens (Dark Mode) */
     --color-background: var(--color-charcoal-700);
     --color-surface: var(--color-charcoal-800);
     --color-text: var(--color-gray-200);
@@ -916,13 +920,88 @@ select.form-control {
     --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
     --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
       inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
 
-    /* RGB versions for dark mode */
     --color-success-rgb: var(--color-teal-300-rgb);
     --color-error-rgb: var(--color-red-400-rgb);
     --color-warning-rgb: var(--color-orange-400-rgb);
     --color-info-rgb: var(--color-gray-300-rgb);
   }
+}
+
+[data-color-scheme="dark"] {
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  --color-bg-1: rgba(29, 78, 216, 0.15);
+  --color-bg-2: rgba(180, 83, 9, 0.15);
+  --color-bg-3: rgba(21, 128, 61, 0.15);
+  --color-bg-4: rgba(185, 28, 28, 0.15);
+  --color-bg-5: rgba(107, 33, 168, 0.15);
+  --color-bg-6: rgba(194, 65, 12, 0.15);
+  --color-bg-7: rgba(190, 24, 93, 0.15);
+  --color-bg-8: rgba(8, 145, 178, 0.15);
+  
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
 }
 
 /* Reset and base styles */
@@ -943,7 +1022,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--space-16);
 }
@@ -951,10 +1030,9 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-base);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   margin-bottom: var(--space-16);
-  color: var(--color-text);
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -963,7 +1041,7 @@ h2 { font-size: var(--font-size-3xl); }
 h3 { font-size: var(--font-size-2xl); }
 h4 { font-size: var(--font-size-xl); }
 h5 { font-size: var(--font-size-lg); }
-h6 { font-size: var(--font-size-md); }
+h6 { font-size: var(--font-size-base); }
 
 p {
   margin-bottom: var(--space-16);
@@ -972,7 +1050,7 @@ p {
 a {
   color: var(--color-primary);
   text-decoration: none;
-  transition: color var(--duration-fast) var(--ease-standard);
+  transition: color var(--duration-normal) var(--ease-standard);
 }
 
 a:hover {
@@ -1006,7 +1084,6 @@ a:hover {
   font-size: var(--font-size-sm);
   opacity: 0.9;
   font-style: italic;
-  color: var(--color-btn-primary-text);
 }
 
 .nav-list {
@@ -1045,12 +1122,12 @@ a:hover {
   background: var(--color-btn-primary-text);
   margin: 3px 0;
   transition: var(--duration-normal);
-  border-radius: var(--radius-sm);
+  border-radius: var(--space-2);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, rgba(var(--color-teal-500-rgb), 0.08), var(--color-surface));
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-surface));
   padding: var(--space-32) 0;
   text-align: center;
   position: relative;
@@ -1064,7 +1141,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
   margin-bottom: var(--space-32);
   max-width: 800px;
@@ -1082,14 +1159,14 @@ a:hover {
   text-align: center;
   color: var(--color-primary);
   font-size: var(--font-size-3xl);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .event-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-24);
-  margin-top: var(--space-32);
+  margin-top: var(--space-24);
 }
 
 .event-card {
@@ -1097,8 +1174,7 @@ a:hover {
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  transition: transform var(--duration-normal) var(--ease-standard), 
-              box-shadow var(--duration-normal) var(--ease-standard);
+  transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard);
   position: relative;
   overflow: hidden;
   min-height: 200px;
@@ -1148,11 +1224,11 @@ a:hover {
 .hero-with-bg .hero-content {
   position: relative;
   z-index: 2;
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
 }
 
 .hero-with-bg .hero-content h2 {
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
 }
 
 .hero-with-bg .hero-subtitle {
@@ -1160,7 +1236,25 @@ a:hover {
 }
 
 .hero-with-bg .announcements h3 {
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
+}
+
+/* DSNY Logo Background Sections */
+.offers-with-bg,
+.about-with-bg,
+.membership-with-bg,
+.news-with-bg,
+.gallery-with-bg,
+.contact-with-bg,
+.social-media-with-bg,
+.footer-with-bg {
+  background-image: url('https://www.brooklyncb5.org/wp-content/uploads/2020/09/DSNY-Logo-with-Sanitation.png'),
+                    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+  background-size: 300px auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  position: relative;
 }
 
 /* Exclusive Offers */
@@ -1172,17 +1266,18 @@ a:hover {
 .offers h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .offer-card {
-  background: var(--color-surface);
-  padding: var(--space-32);
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--space-24);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  backdrop-filter: blur(5px);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1198,23 +1293,6 @@ a:hover {
   margin: var(--space-24) 0;
   font-family: var(--font-family-mono);
   font-size: var(--font-size-lg);
-  border: 1px solid var(--color-border);
-}
-
-/* Offers section with DSNY logo background */
-.offers-with-bg {
-  background-image: url('https://ppl-ai-assets.s3.amazonaws.com/search-results/image:40/official-logo-of-the-new-york-city-department-of-sanitation-dsny-it-features-a-circular-design-with-a-white-outer-ring-containing-the-text-the-city-of-new-york-department-of-sanitation-written-in-a-black-serif-font-inside-the-circle-the-background-is-turquoise-in-the-center-there-is-a-yellow-caduceus-a-staff-with-wings-and-intertwined-snakes-overlaid-with-a-bold-red-paragraph-symbol-this-logo-is-relevant-to-the-query-as-the-user-requested-the-dsny-logo-to-be-used-as-a-background-image-for-the-member-exclusive-benefits-section-making-this-logo-an-appropriate-choice-to-illustrate-or-implement-in-the-code-this-image-can-be-used-to-visually-identify-the-dsny-brand-and-provide-an-official-emblematic-representation-of-the-department-for-inclusion-in-web-design-or-materials.jpg'), 
-                   linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
-  background-size: 200px 200px, cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  position: relative;
-}
-
-.offers-with-bg .offer-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(5px);
 }
 
 /* About Section */
@@ -1225,7 +1303,7 @@ a:hover {
 .about h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .about-content {
@@ -1233,6 +1311,14 @@ a:hover {
   grid-template-columns: 2fr 1fr;
   gap: var(--space-32);
   align-items: center;
+}
+
+.about-text {
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--color-card-border);
 }
 
 .about-text p {
@@ -1255,6 +1341,15 @@ a:hover {
   text-align: center;
 }
 
+.membership-with-bg {
+  background-image: url('https://www.brooklyncb5.org/wp-content/uploads/2020/09/DSNY-Logo-with-Sanitation.png'),
+                    linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
+  background-size: 300px auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
 .membership h2 {
   color: var(--color-btn-primary-text);
   margin-bottom: var(--space-24);
@@ -1262,7 +1357,7 @@ a:hover {
 
 .membership p {
   font-size: var(--font-size-lg);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -1270,13 +1365,14 @@ a:hover {
 
 .membership-benefits {
   background: rgba(255, 255, 255, 0.1);
-  padding: var(--space-32);
+  padding: var(--space-24);
   border-radius: var(--radius-lg);
-  margin: var(--space-32) 0;
+  margin: var(--space-24) 0;
   text-align: left;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  backdrop-filter: blur(5px);
 }
 
 .membership-benefits h3 {
@@ -1299,9 +1395,9 @@ a:hover {
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--color-teal-300);
+  color: var(--color-primary-active);
   font-weight: bold;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
 }
 
 /* News Section */
@@ -1313,7 +1409,7 @@ a:hover {
 .news h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .news-grid {
@@ -1323,11 +1419,12 @@ a:hover {
 }
 
 .news-item {
-  background: var(--color-surface);
+  background: rgba(255, 255, 255, 0.95);
   padding: var(--space-24);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--duration-normal) var(--ease-standard);
+  backdrop-filter: blur(5px);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1355,7 +1452,7 @@ a:hover {
 .gallery h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .gallery-grid {
@@ -1370,8 +1467,7 @@ a:hover {
   object-fit: cover;
   border-radius: var(--radius-base);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--duration-normal) var(--ease-standard), 
-              box-shadow var(--duration-normal) var(--ease-standard);
+  transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard);
 }
 
 .gallery-image:hover {
@@ -1388,7 +1484,7 @@ a:hover {
 .contact h2 {
   text-align: center;
   color: var(--color-primary);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .contact-content {
@@ -1400,10 +1496,11 @@ a:hover {
 }
 
 .contact-form {
-  background: var(--color-surface);
-  padding: var(--space-32);
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--space-24);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  backdrop-filter: blur(5px);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1430,11 +1527,13 @@ a:hover {
   padding: var(--space-12);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-base);
-  font-family: inherit;
-  font-size: var(--font-size-md);
-  background-color: var(--color-surface);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
   color: var(--color-text);
-  transition: border-color var(--duration-fast) var(--ease-standard);
+  background-color: var(--color-surface);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
 }
 
 .form-group input:focus,
@@ -1446,14 +1545,13 @@ a:hover {
 .submit-button {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
   color: var(--color-btn-primary-text);
-  padding: var(--space-16) var(--space-32);
+  padding: var(--space-12) var(--space-24);
   border: none;
   border-radius: var(--radius-base);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: transform var(--duration-normal) var(--ease-standard), 
-              box-shadow var(--duration-normal) var(--ease-standard);
+  transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard);
   width: 100%;
 }
 
@@ -1462,8 +1560,12 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
+.submit-button:focus {
+  outline: var(--focus-outline);
+}
+
 .contact-info {
-  padding: var(--space-32);
+  padding: var(--space-24);
 }
 
 .contact-info h3 {
@@ -1474,9 +1576,10 @@ a:hover {
 .contact-item {
   margin-bottom: var(--space-24);
   padding: var(--space-16);
-  background: var(--color-surface);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: var(--radius-base);
   box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(5px);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1487,20 +1590,29 @@ a:hover {
 /* Social Media Section */
 .social-media {
   background: linear-gradient(135deg, var(--color-slate-900), var(--color-charcoal-800));
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
   padding: var(--space-32) 0;
   text-align: center;
 }
 
+.social-media-with-bg {
+  background-image: url('https://www.brooklyncb5.org/wp-content/uploads/2020/09/DSNY-Logo-with-Sanitation.png'),
+                    linear-gradient(135deg, rgba(19, 52, 59, 0.9), rgba(38, 40, 40, 0.9));
+  background-size: 300px auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
 .social-media h2 {
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
   margin-bottom: var(--space-16);
 }
 
 .social-media p {
   font-size: var(--font-size-lg);
   opacity: 0.9;
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-24);
 }
 
 .social-links {
@@ -1517,17 +1629,17 @@ a:hover {
   padding: var(--space-16) var(--space-24);
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
   text-decoration: none;
-  transition: background-color var(--duration-normal) var(--ease-standard), 
-              transform var(--duration-normal) var(--ease-standard);
+  transition: background-color var(--duration-normal) var(--ease-standard), transform var(--duration-normal) var(--ease-standard);
   font-weight: var(--font-weight-medium);
+  backdrop-filter: blur(5px);
 }
 
 .social-link:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
 }
 
 .social-icon {
@@ -1537,30 +1649,46 @@ a:hover {
 /* Footer */
 .footer {
   background: var(--color-charcoal-700);
-  color: var(--color-white);
+  color: var(--color-btn-primary-text);
   padding: var(--space-32) 0 var(--space-24) 0;
+}
+
+.footer-with-bg {
+  background-image: url('https://www.brooklyncb5.org/wp-content/uploads/2020/09/DSNY-Logo-with-Sanitation.png'),
+                    linear-gradient(rgba(31, 33, 33, 0.9), rgba(31, 33, 33, 0.9));
+  background-size: 300px auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-32);
-  margin-bottom: var(--space-32);
+  gap: var(--space-24);
+  margin-bottom: var(--space-24);
+}
+
+.footer-section {
+  background: rgba(0, 0, 0, 0.3);
+  padding: var(--space-24);
+  border-radius: var(--radius-base);
+  backdrop-filter: blur(5px);
 }
 
 .footer-section h4 {
-  color: var(--color-teal-300);
+  color: var(--color-primary-active);
   margin-bottom: var(--space-16);
 }
 
 .footer-section p,
 .footer-section a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   line-height: var(--line-height-normal);
 }
 
 .footer-section a:hover {
-  color: var(--color-teal-300);
+  color: var(--color-primary-active);
 }
 
 .footer-links {
@@ -1592,10 +1720,14 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: var(--space-24);
   text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  margin-top: var(--space-24);
+  border-radius: var(--radius-base);
+  backdrop-filter: blur(5px);
 }
 
 .footer-bottom p {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
@@ -1604,12 +1736,11 @@ a:hover {
   display: inline-block;
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
   color: var(--color-btn-primary-text) !important;
-  padding: var(--space-16) var(--space-32);
+  padding: var(--space-16) var(--space-24);
   border-radius: var(--radius-lg);
   font-weight: var(--font-weight-medium);
   text-decoration: none;
-  transition: transform var(--duration-normal) var(--ease-standard), 
-              box-shadow var(--duration-normal) var(--ease-standard);
+  transition: transform var(--duration-normal) var(--ease-standard), box-shadow var(--duration-normal) var(--ease-standard);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1619,10 +1750,14 @@ a:hover {
   color: var(--color-btn-primary-text) !important;
 }
 
+.cta-button:focus {
+  outline: var(--focus-outline);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 0 var(--space-16);
+    padding: 0 var(--space-12);
   }
 
   /* Mobile navigation */
@@ -1701,15 +1836,23 @@ a:hover {
     max-width: 300px;
     justify-content: center;
   }
+
+  /* Background size adjustments for mobile */
+  .offers-with-bg,
+  .about-with-bg,
+  .membership-with-bg,
+  .news-with-bg,
+  .gallery-with-bg,
+  .contact-with-bg,
+  .social-media-with-bg,
+  .footer-with-bg {
+    background-size: 200px auto, cover;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--space-12);
-  }
-
-  .hero {
-    padding: var(--space-24) 0;
+    padding: 0 var(--space-8);
   }
 
   .hero-content h2 {
@@ -1717,7 +1860,7 @@ a:hover {
   }
 
   .hero-subtitle {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
   }
 
   .event-cards {
@@ -1732,53 +1875,52 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .offers {
-    padding: var(--space-24) 0;
+  /* Smaller background logos for very small screens */
+  .offers-with-bg,
+  .about-with-bg,
+  .membership-with-bg,
+  .news-with-bg,
+  .gallery-with-bg,
+  .contact-with-bg,
+  .social-media-with-bg,
+  .footer-with-bg {
+    background-size: 150px auto, cover;
   }
 
-  .about {
-    padding: var(--space-24) 0;
+  /* Typography adjustments for mobile */
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+  h3 { font-size: var(--font-size-lg); }
+
+  body {
+    font-size: var(--font-size-base);
   }
 
-  .membership {
-    padding: var(--space-24) 0;
+  .hero-subtitle {
+    margin-bottom: var(--space-24);
   }
 
-  .news {
-    padding: var(--space-24) 0;
-  }
-
-  .gallery {
-    padding: var(--space-24) 0;
-  }
-
-  .contact {
-    padding: var(--space-24) 0;
-  }
-
-  .social-media {
-    padding: var(--space-24) 0;
-  }
-
+  .hero,
+  .offers,
+  .about,
+  .membership,
+  .news,
+  .gallery,
+  .contact,
+  .social-media,
   .footer {
-    padding: var(--space-24) 0 var(--space-16) 0;
+    padding: var(--space-24) 0;
   }
 
-  .contact-form {
-    padding: var(--space-24);
-  }
-
-  .contact-info {
-    padding: var(--space-24);
-  }
-
-  .offer-card {
-    padding: var(--space-24);
-  }
-
-  .membership-benefits {
-    padding: var(--space-24);
-    margin: var(--space-24) 0;
+  .announcements h3,
+  .offers h2,
+  .about h2,
+  .membership h2,
+  .news h2,
+  .gallery h2,
+  .contact h2,
+  .social-media h2 {
+    margin-bottom: var(--space-16);
   }
 }
 

@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: var(--color-jade-primary, #22C55E);
+        background: #008000;
         color: white;
         border: none;
         font-size: 20px;
@@ -248,12 +248,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     backToTopButton.addEventListener('mouseenter', function() {
         this.style.transform = 'scale(1.1)';
-        this.style.background = 'var(--color-jade-secondary, #16A34A)';
+        this.style.background = '#006600';
     });
     
     backToTopButton.addEventListener('mouseleave', function() {
         this.style.transform = 'scale(1)';
-        this.style.background = 'var(--color-jade-primary, #22C55E)';
+        this.style.background = '#008000';
     });
     
     document.body.appendChild(backToTopButton);
